@@ -1,6 +1,6 @@
 import { getServerSession } from 'next-auth';
 import { FC, ReactNode } from 'react';
-import { options } from "@/app/api/auth/[...nextauth]/route";
+import options from "@/app/api/auth/[...nextauth]/authOptions";
 
 interface Props {
   authenticated: ReactNode;

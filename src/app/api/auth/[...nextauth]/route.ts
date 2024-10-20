@@ -1,15 +1,5 @@
-import NextAuth, { AuthOptions } from "next-auth";
-import LineProvider from "next-auth/providers/line";
-
-export const options: AuthOptions = {
-  providers: [
-    LineProvider({
-      clientId: process.env.LINE_CLIENT_ID ?? "",
-      clientSecret: process.env.LINE_CLIENT_SECRET ?? "",
-    }),
-  ],
-  secret: process.env.NEXTAUTH_SECRET,
-};
+import NextAuth from "next-auth";
+import options from "@/app/api/auth/[...nextauth]/authOptions";
 
 const handler = NextAuth(options);
 
