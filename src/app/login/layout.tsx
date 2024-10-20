@@ -8,7 +8,6 @@ interface Props {
 }
 
 const HomeLayout: FC<Props> = async ({ authenticated, unauthenticated }) => {
-  // optionsはapiで使用したものを使用する
   const session = await getServerSession(options);
 
   return <>{session ? authenticated : unauthenticated}</>;
