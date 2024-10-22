@@ -1,5 +1,12 @@
 'use client';
 
+import { LogoutButton } from "./LogoutButton";
+
 export default function Page() {
-    return <p>ログイン中</p>;
+    return (
+        <div>
+            <div>ログイン中</div>
+            <LogoutButton />
+        </div>
+    );
 }
